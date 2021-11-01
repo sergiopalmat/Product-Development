@@ -1,7 +1,5 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
-
+import pandas as pd, numpy as np
 
 """
 # Uber Pickups Exercises
