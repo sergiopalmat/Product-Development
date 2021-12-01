@@ -17,8 +17,8 @@ listados a continuación
 Se deja a la creatividad de cada developer que construirá, por lo que parte de la nota es la creatividad mostrada.
 
 ### Grupo:
-Eddson Sierra
-Alejandro López
-Diego Álvarez
-Jairo Salazar
-Sergio Palma
+- Eddson Sierra
+- Alejandro López
+- Diego Álvarez
+- Jairo Salazar
+- Sergio Palma
