@@ -1,57 +1,51 @@
 library(shiny)
-library(dplyr)
 library(ggplot2)
+library(dplyr)
 
 shinyServer(function(input, output, session) {
+  
+  plot.Colors <- reactiveValues(colVect = rep(1, nrow(mtcars)), preHoverColors = rep(1, nrow(mtcars)))
 
-  selected_points <- reactiveVal(rep(FALSE, nrow(mtcars)))
-  
-  
-  observeEvent(input$mouse_brush, {
-    selected <- brushedPoints(mtcars, input$mouse_brush, allRows=TRUE)['selected_']
-    selected_points(selected | selected_points())
+  observe({
+    output$plot_click_option <- renderPlot({
+      plot(mtcars$wt, mtcars$mpg, xlab = 'wt', ylab = 'Millas por galon', pch = 16, cex = 2.5, col = plot.Colors$colVect)
+    })
   })
   
-  observeEvent(input$clk, {
-    selected <- nearPoints(mtcars, input$clk, xvar="wt", yvar="mpg", allRows=TRUE)['selected_']
-    selected_points(selected | selected_points())
+  observeEvent(input$mouse_hover,{
+    plot.Colors$colVect <- plot.Colors$preHoverColors
+    eventDots <- nearPoints(mtcars, input$mouse_hover, xvar = 'wt', yvar = 'mpg')
+    filteredRowsIndex <- mtcars$wt == eventDots$wt & mtcars$mpg == eventDots$mpg
+    plot.Colors$colVect[filteredRowsIndex] <- 8
   })
   
-  observeEvent(input$mouse_hover, {
-    selected <- nearPoints(mtcars, input$mouse_hover, xvar="wt", yvar="mpg", allRows=TRUE)['selected_']
-    selected_points(selected_points() & xor(selected_points(), selected))
-  })
-  
-  observeEvent(input$dclk, {
-    selected_points(rep(FALSE, nrow(mtcars)))
+  observeEvent(input$click,{
+    eventDots <- nearPoints(mtcars, input$click, xvar = 'wt', yvar = 'mpg')
+    filteredRowsIndex <- mtcars$wt == eventDots$wt & mtcars$mpg == eventDots$mpg
+    plot.Colors$colVect[filteredRowsIndex] <- 3
+    plot.Colors$preHoverColors[filteredRowsIndex] <- 3
+    output$mtcars_tbl_click <- renderTable({eventDots})
   })
 
-  
-  output$plot <- renderPlot({
-    mtcars$selected <- selected_points()
-    ggplot(mtcars, aes(wt, mpg)) + 
-      geom_point(aes(colour = selected)) +
-      scale_color_manual(values=c("TRUE"="green","FALSE"="gray")) +
-    theme(panel.border = element_blank(),
-          panel.grid.major = element_blank(),
-          panel.grid.minor = element_blank(),
-          panel.background = element_rect(fill = "white",
-                                         colour = "black"),
-          legend.position = "none")
+  observeEvent(input$dclk,{
+    eventDots <- nearPoints(mtcars, input$dclk, xvar = 'wt', yvar = 'mpg')
+    filteredRowsIndex <- mtcars$wt == eventDots$wt & mtcars$mpg == eventDots$mpg
+    plot.Colors$colVect[filteredRowsIndex] <- 1
+    plot.Colors$preHoverColors[filteredRowsIndex] <- 1
     
-  }, res = 150)
-  
-  
-  output$mtcars_tbl <- DT::renderDataTable({
-    df <- mtcars
-    if(any(selected_points())){ 
-      df$selected <- selected_points()
-      df <- df %>% 
-              filter(selected == TRUE) %>%
-              select(-selected)
-    } 
+  })
+
+  observeEvent(input$mouse_brush,{
+    eventDots <-  brushedPoints(mtcars, input$mouse_brush, xvar='wt', yvar = 'mpg')
+    filteredRowsIndex <- mtcars$wt >= min(eventDots$wt) & mtcars$wt <= max(eventDots$wt) & mtcars$mpg >= min(eventDots$mpg) & mtcars$mpg <= max(mtcars$mpg)
+    plot.Colors$colVect[filteredRowsIndex] <- 3
+    plot.Colors$preHoverColors[filteredRowsIndex] <- 3
+    
+  })
+
+  output$mtcars_tbl <- renderTable({
+    df <- brushedPoints(mtcars, input$mouse_brush, xvar='wt', yvar = 'mpg')
     df
   })
   
-
 })
