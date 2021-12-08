@@ -18,7 +18,7 @@ Se busca evaluar todos los conocimientos adquiridos por los estudiantes a lo lar
 ### Covid 19 Dashboard
 Utilizando los datos provistos, los cuales contienen información sobre los contagios, las recuperaciones y las muertes, dados por país y región. Se solicita que usted construya un data pipeline que procese los 3 archivos csv, los inserte a una base de datos, y luego basado en los datos procesados, debe construir un dashboard que permite analizar las estadísticas de cada uno de los archivos.
 
-## Fases
+### Fases
 ### Instalación y Configuración
 #### Docker
 #### Base de Datos
