@@ -20,6 +20,9 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 
 ## Fases
 ### Instalación y Configuración
+#### Docker
+#### Base de Datos
+#### DAGS en AirFlow
 
 ### Ingesta de Datos
 
