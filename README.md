@@ -27,12 +27,17 @@ La instalación del proyecto se encuentra en el repositorio, distribuido de la s
 - images: Imagenes utilizadas para el dashboard.
 
 #### Docker
+A continuación se describe la instalación y funcionamiento del contenedor de Docker utilizado en el proyecto:
 
 #### Base de Datos
+Estructura y funcionalidad de las tablas utilizadas:
 
 #### DAGS en AirFlow
+DAGS utilizados:
 
+<br>
 ### Ingesta de Datos
+Proceso realizado para carga y procesamiento de la información estadistica:
 
 ### Procesamiento
 
