@@ -20,8 +20,15 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 
 ### Fases
 ### Instalación y Configuración
+La instalación del proyecto se encuentra en el repositorio, distribuido de la siguiente forma:
+
+- data_sources: Contiene los archivos originales del proyecto.
+- images: Imagenes utilizadas para el dashboard.
+
 #### Docker
+
 #### Base de Datos
+
 #### DAGS en AirFlow
 
 ### Ingesta de Datos
