@@ -32,6 +32,9 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 - Recuperados
 - Fallecidos
 
+![alt text](dashboard_1.jfif)
+
+![alt text](dashboard_tasa.jfif)
 2. Esta información puede ser filtrada geograficamente.
 3. Puede obtenerse la tasa de mortalidad.
 
