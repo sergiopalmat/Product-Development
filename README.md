@@ -26,6 +26,13 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 ### Procesamiento
 
 ### Dashboard
-Caracteristicas y funcionalidad:
+#### Caracteristicas y funcionalidad:
+1. Muestra información geografica de los siguientes datos:
+- Activos
+- Recuperados
+- Fallecidos
+
+2. Esta información puede ser filtrada geograficamente.
+3. Puede obtenerse la tasa de mortalidad.
 
 
