@@ -2,8 +2,8 @@
 ## Proyecto Final
 <br>
 Integrantes del grupo:
-- Eddson Sierra
-- Alejandro López
-- Jairo Salazar
-- Diego Martínez
-- Sergio Palma
+1. Eddson Sierra
+2. Alejandro López
+3. Jairo Salazar
+4. Diego Martínez
+5. Sergio Palma
