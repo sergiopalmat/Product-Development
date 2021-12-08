@@ -11,4 +11,4 @@ Integrantes del grupo:
 
 - Diego Martínez
 
--Sergio Palma
+- Sergio Palma
