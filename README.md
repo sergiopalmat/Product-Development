@@ -5,11 +5,11 @@ Se busca evaluar todos los conocimientos adquiridos por los estudiantes a lo lar
 <br>
 Procesamiento de archivos para disponibilizarlos y presentarlos en un Dashboard con información de Covid-19.
 
-<a href="page1.html">- Instalación</a>
+<a href="instalacion.html">- Instalación</a>
 <br>
-<a href="page2.html">- Ingesta de Datos</a>
+<a href="ingesta.html">- Ingesta de Datos</a>
 <br>
-<a href="page2.html">- Presentación (Dashboard)</a>
+<a href="presentacion.html">- Presentación (Dashboard)</a>
 <br>
-<a href="page2.html">- Información grupo</a>
+<a href="informacion.html">- Información grupo</a>
 <br>
