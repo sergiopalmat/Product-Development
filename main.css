@@ -5,7 +5,7 @@
 @import "minima";
 
 .site-title::before {
-	content: url("logo.jpg");
+	content: url("logo-ug.png");
 	display: inline-block;
 	position: relative;
 	width: 37px;
