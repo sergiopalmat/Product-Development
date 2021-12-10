@@ -63,7 +63,7 @@ Proceso realizado para carga y procesamiento de la información estadistica:
 
 ![alt text](dist_geografica.jpg)
 
-4. Puede obtenerse la tasa de mortalidad.
+3. Puede obtenerse la tasa de mortalidad.
 
 ![alt text](tasa_mortalidad.jpg)
 
