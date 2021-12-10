@@ -20,6 +20,7 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 
 <a href="page1.html">- Desarrollo</a>
 <br>
+<br>
 <a href="page2.html">- Uso</a>
 
 <br>
