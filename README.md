@@ -21,11 +21,7 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 <br>
 ### Fases de Desarrollo
 ### Instalación, configuración y ejecución
-1. Pull del archivo.
-- docker build . -t fastapi_app
-- docker-compose build
-- docker-compose run airflow-init
-- docker-compose up
+
 
 La instalación del proyecto se encuentra en el repositorio, distribuido de la siguiente forma:
 
@@ -35,17 +31,26 @@ La instalación del proyecto se encuentra en el repositorio, distribuido de la s
 #### Docker
 A continuación se describe la instalación y funcionamiento del contenedor de Docker utilizado en el proyecto:
 
+##### Pull del archivo.
+- docker build . -t fastapi_app
+- docker-compose build
+- docker-compose run airflow-init
+- docker-compose up
+
+![alt text](instalacion.png)
+
 #### Base de Datos
 Estructura y funcionalidad de las tablas utilizadas:
 
-#### DAGS en AirFlow
-DAGS utilizados:
-
 <br>
-### Ingesta de Datos
+#### Ingesta de Datos
 Proceso realizado para carga y procesamiento de la información estadistica:
 
-### Procesamiento
+##### DAGS utilizados:
+![alt text](DAGs.png)
+
+##### Estructura de la base de datos:
+
 
 ### Dashboard
 #### Caracteristicas y funcionalidad:
@@ -56,9 +61,9 @@ Proceso realizado para carga y procesamiento de la información estadistica:
 
 2. Esta información puede ser filtrada geograficamente.
 
-![alt text](dashboard_1.jfif)
+![alt text](dist_geografica.jpg)
 
 4. Puede obtenerse la tasa de mortalidad.
 
-![alt text](dashboard_tasa.jfif)
+![alt text](tasa_mortalidad.jpg)
 
