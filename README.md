@@ -20,7 +20,13 @@ Utilizando los datos provistos, los cuales contienen información sobre los cont
 
 <br>
 ### Fases de Desarrollo
-### Instalación y Configuración
+### Instalación, configuración y ejecución
+1. Pull del archivo.
+- docker build . -t fastapi_app
+- docker-compose build
+- docker-compose run airflow-init
+- docker-compose up
+
 La instalación del proyecto se encuentra en el repositorio, distribuido de la siguiente forma:
 
 - data_sources: Contiene los archivos originales del proyecto.
