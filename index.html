@@ -40,9 +40,11 @@
                 <div class="main-navigation responsive-menu">
                     <ul class="navigation">
                         <li><a href="#top"><i class="fa fa-globe"></i>Información General</a></li>
-                        <li><a href="#about"><i class="fa fa-cog"></i>Instalación y Desarrollo</a></li>
-                        <li><a href="#projects"><i class="fa fa-laptop"></i>Presentación (Dashboard)</a></li>
-                        <li><a href="#contact"><i class="fa fa-users"></i>Información Grupo</a></li>
+                        <li><a href="#about"><i class="fa fa-cog"></i>Instalación</a></li>
+                        <li><a href="#projects"><i class="fa fa-laptop"></i>Ejecución</a></li>
+						<li><a href="#almacenamiento"><i class="fa fa-laptop"></i>Almacenamiento de Datos</a></li>
+                        <li><a href="#dashboard"><i class="fa fa-users"></i>Dashboard</a></li>
+						<li><a href="#contact"><i class="fa fa-users"></i>Acerca del Grupo</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,9 +62,11 @@
             <div class="main-navigation">
                 <ul class="navigation">
                     <li><a href="#top"><i class="fa fa-globe"></i>Información General</a></li>
-                    <li><a href="#about"><i class="fa fa-cog"></i>Instalación y Desarrollo</a></li>
-                    <li><a href="#projects"><i class="fa fa-laptop"></i>Presentación (Dashboard)</a></li>
-                    <li><a href="#contact"><i class="fa fa-users"></i>Información Grupo</a></li>
+                    <li><a href="#about"><i class="fa fa-cog"></i>Instalación</a></li>
+                    <li><a href="#projects"><i class="fa fa-laptop"></i>Ejecución</a></li>
+					<li><a href="#almacenamiento"><i class="fa fa-laptop"></i>Almacenamiento de Datos</a></li>
+					<li><a href="#dashboard"><i class="fa fa-users"></i>Dashboard</a></li>
+                    <li><a href="#contact"><i class="fa fa-users"></i>Acerca del Grupo</a></li>
                 </ul>
             </div> <!-- .main-navigation -->
             <div class="social-icons">
@@ -83,6 +87,8 @@
             <div class="welcome-text">
                 <h2>Proyecto Final</h2>
                 <h5>Este proyecto tiene como objetivo evaluar los conocimientos adquiridos por los estudiantes a lo largo del trimestre y consiste en automatizar el despliegue de un dashboard sobre COVID-19 a través de contenedores desarrollados con Docker e ingesta de datos con Airflow.</h5>
+				<br>
+				<h5>Los datos provistos consisten en archivos csv con información de contagios, recuperaciones y muertes por COVID-19, dados por país y región. El objetivo específico es construir un pipeline que procese los 3 archivos, los inserte en una base de datos y finalmente, a partir de dichos datos, se muestre un dashboard que permita realizar un análisis estadístico y de los insights.</h5>
             </div>
         </div>
 
@@ -96,66 +102,70 @@
                     <div class="page-section" id="about">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Instalación y Desarrollo</h4>
-                            <p>Utilizando los datos provistos, los cuales contienen información sobre los contagios, las recuperaciones y las muertes, dados por país y región. Se solicita que usted construya un data pipeline que procese los 3 archivos csv, los inserte a una base de datos, y luego basado en los datos procesados, debe construir un dashboard que permite analizar las estadísticas de cada uno de los archivos.</p>
+                            <h4 class="widget-title">Instalación</h4>
+                            <p>El código para instalar el proyecto se encuentra en el repositorio, organizado de la siguiente forma:</p>
 							<br>
-							<p><strong>Instalación, configuración y ejecución</strong></p>							
-							<p>La instalación del proyecto se encuentra en el repositorio, distribuido de la siguiente forma:</>
 							<ul>
-								<li>- Data_sources: Contiene los archivos originales del proyecto.</li>
-								<li>- Images</li>
-							</ul>
-							<br>
-							<p><strong>Docker</strong></p>
-							<p>A continuación se describe la instalación y funcionamiento del contenedor de Docker utilizado en el proyecto:</p>
-							<ul>
-								<li>1. Pull del archivo de docker</li>							
-								<li>2. docker build . -t fastapi_app</li>
-								<li>3. docker-compose build</li>
-								<li>4. docker-compose up</li>
-							</ul>
-							<br>
-                            <div class="about-image">
-                                <img src="img/8.png" alt="instalacion">
-                            </div>
-                            </div>
-				<p>3. Procesamiento de DAGs:</p>
-				<br>
-                            <div class="about-image">
-                                <img src="img/DAGs.png" alt="DAGs">
-                            </div>			    
-                            <hr>							
-							<br>
-							<p><strong>BASE DE DATOS</strong></p>
-							<p>Estructura y funcionalidad de las tablas utilizadas:</p>
-							<ul>
-								<li>- CASES_CONFIRMEDCV19: Contiene los casos confirmados.</li>							
-								<li>- CASES_DEATHCV19: Conteo de casos fallecidos.</li>
-								<li>- CASES_RECOVEREDCV19: Conteo de casos recuperados.</li>
-								<li>- CASES_CV19: Información de todos los casos.</li>
+								<li>• Dashboard: carpeta que contiene todos los archivos para la ejecución del dashboard mediante Streamlit.</li>
+								<li>• Airflow: contiene los scripts para la creación y puesta en marcha de los flujos de ingesta, contenedores y puesta en marcha del servicio mediante FastAPI.</li>
 							</ul>
                             <hr>
                         </div>
                     </div> <!-- #about -->
                     </div>
+					
+                    <!-- EJECUCION -->
+                    <div class="page-section" id="ejecucion">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Ejecución</h4>
+                            <p>Para ejecutar el proyecto (una vez realizado el pull del código) se deben ejecutar los siguientes comandos de terminal:</p>
+							<br>
+							<ul>						
+								<li>2. docker build . -t fastapi_app</li>
+								<li>3. docker-compose build</li>
+								<li>4. docker-compose up</li>
+							</ul>
+                            <hr>
+                        </div>
+					</div>
+                    </div> <!-- #Ejecución -->
+                    <!-- ALMACENAMIENTO -->
+                    <div class="page-section" id="almacenamiento">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Almacenamiento</h4>
+                            <p>Finalmente, el proceso lleva los datos insumo a una base de datos MySQL en tres tablas stage y una tabla final lista para ser consumida por el dashboard:</p>
+							<br>
+							<ul>
+								<li>- CASES_CONFIRMEDCV19: Información de los datos acumulados de casos confirmados por fecha, país y coordenadas.</li>							
+								<li>- CASES_DEATHCV19: Información de los datos acumulados de muertes por fecha, país y coordenadas.</li>
+								<li>- CASES_RECOVEREDCV19: Información de los datos acumulados de casos de recuperaciones por fecha, país y coordenadas.</li>
+								<li>- CASES_CV19: Información de todos los tipos de casos por fecha, país y coordenadas.</li>
+							</ul>
+                            <hr>
+                        </div>
+						<p>Cada una de estas tablas está asociada a un endpoint en fastAPI que permite consumir los datos hacia el tablero.</p>
+                    </div> <!-- #Almacenamiento -->
+                    </div>
+					
                     
                     <!-- PROJECTS -->
                     <div class="page-section" id="projects">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Presentación (Dashboard)</h4>
-                            <p>1. Características y funcionalidad:</p>							
+                            <h4 class="widget-title">Dashboard</h4>
+                            <p>El dashboard consiste en 4 vistas:</p>							
 							<ul>
-								<li>- Activos</li>							
-								<li>- Recuperados</li>
-								<li>- Fallecidos</li>
+								<li>1.	Inicio: contiene una breve descripción sobre el COVID-19.</li>							
+								<li>2.	Análisis de la distribución geográfica: consiste en un mapa en el que se representa visualmente la distribución de los diferentes tipos de casos. El usuario puede seleccionar el tipo de filtro para la fecha (slider de rangos o calendario) y un seleccionar la opción del tipo o estado de caso.</li>
+								<li>3.	Estadísticas de incrementos: se muestra la tendencia de los casos por varios países, lo que permite identificar los incrementos o descensos a lo largo del tiempo.</li>
+								<li>4.	Estadísticas adicionales: se muestra el comportamiento de los casos agrupados por año y mes, así como la tendencia de la tasa de mortalidad % (calculada como la cantidad de muertes sobre el total de casos confirmados para cada periodo). El usuario puede seleccionar el país que necesita analizar.</li>
 							</ul>
-							<p>2. Esta información puede ser filtrada geograficamente:</p>
 							<br>
                             <div class="about-image">
                                 <img src="img/1.jpg" alt="instalacion">
                             </div>								
-							<p>3. Puede obtenerse la tasa de mortalidad:</p>
 							<br>
                             <div class="about-image">
                                 <img src="img/2.jpg" alt="instalacion">	
@@ -238,11 +248,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">Información de Grupo</h4>
-                            <p>- Eddson Sierra</p>
-							<p>- Alejandro Lopez</p>
-							<p>- Diego Martinez</p>
-							<p>- Jairo Salazar</p>
-							<p>- Sergio Palma</p>
+                            <p>Este trabajo fue realizado en conjunto por Eddson Sierra, Alejandro López, Diego Martinez, Jairo Salazar y Sergio Palma. El código y documentación están disponibles en:</p>
+							<li><a href="https://github.com/sergiopalmat/Product-Development"></a></li>
                         </div>
                     </div>
                     <div class="row">
