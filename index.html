@@ -106,8 +106,8 @@
                             <p>El código para instalar el proyecto se encuentra en el repositorio, organizado de la siguiente forma:</p>
 							<br>
 							<ul>
-								<li>• Dashboard: carpeta que contiene todos los archivos para la ejecución del dashboard mediante Streamlit.</li>
-								<li>• Airflow: contiene los scripts para la creación y puesta en marcha de los flujos de ingesta, contenedores y puesta en marcha del servicio mediante FastAPI.</li>
+								<li>• <b>Dashboard</b>: carpeta que contiene todos los archivos para la ejecución del dashboard mediante Streamlit.</li>
+								<li>• <b>Airflow</b>: contiene los scripts para la creación y puesta en marcha de los flujos de ingesta, contenedores y puesta en marcha del servicio mediante FastAPI.</li>
 							</ul>
                             <hr>
 							<br>
@@ -169,10 +169,10 @@
                             <p>Finalmente, el proceso lleva los datos insumo a una base de datos MySQL en tres tablas stage y una tabla final lista para ser consumida por el dashboard:</p>
 							<br>
 							<ul>
-								<li>- CASES_CONFIRMEDCV19: Información de los datos acumulados de casos confirmados por fecha, país y coordenadas.</li>							
-								<li>- CASES_DEATHCV19: Información de los datos acumulados de muertes por fecha, país y coordenadas.</li>
-								<li>- CASES_RECOVEREDCV19: Información de los datos acumulados de casos de recuperaciones por fecha, país y coordenadas.</li>
-								<li>- CASES_CV19: Información de todos los tipos de casos por fecha, país y coordenadas.</li>
+								<li>- <b>CASES_CONFIRMEDCV19</b>: Información de los datos acumulados de casos confirmados por fecha, país y coordenadas.</li>							
+								<li>- <b>CASES_DEATHCV19</b>: Información de los datos acumulados de muertes por fecha, país y coordenadas.</li>
+								<li>- <b>CASES_RECOVEREDCV19</b>: Información de los datos acumulados de casos de recuperaciones por fecha, país y coordenadas.</li>
+								<li>- <b>CASES_CV19</b>: Información de todos los tipos de casos por fecha, país y coordenadas.</li>
 							</ul> 
 							<br>							
 							<p>Cada una de estas tablas está asociada a un endpoint en fastAPI que permite consumir los datos hacia el tablero.</p>						
@@ -206,10 +206,10 @@
                             <h4 class="widget-title">Dashboard</h4>
                             <p>El dashboard consiste en 4 vistas:</p>							
 							<ul>
-								<li>1.	Inicio: contiene una breve descripción sobre el COVID-19.</li>							
-								<li>2.	Análisis de la distribución geográfica: consiste en un mapa en el que se representa visualmente la distribución de los diferentes tipos de casos. El usuario puede seleccionar el tipo de filtro para la fecha (slider de rangos o calendario) y un seleccionar la opción del tipo o estado de caso.</li>
-								<li>3.	Estadísticas de incrementos: se muestra la tendencia de los casos por varios países, lo que permite identificar los incrementos o descensos a lo largo del tiempo.</li>
-								<li>4.	Estadísticas adicionales: se muestra el comportamiento de los casos agrupados por año y mes, así como la tendencia de la tasa de mortalidad % (calculada como la cantidad de muertes sobre el total de casos confirmados para cada periodo). El usuario puede seleccionar el país que necesita analizar.</li>
+								<li>1.	<b>Inicio</b>: contiene una breve descripción sobre el COVID-19.</li>							
+								<li>2.	<b>Análisis de la distribución geográfica</b>: consiste en un mapa en el que se representa visualmente la distribución de los diferentes tipos de casos. El usuario puede seleccionar el tipo de filtro para la fecha (slider de rangos o calendario) y un seleccionar la opción del tipo o estado de caso.</li>
+								<li>3.	<b>Estadísticas de incrementos</b>: se muestra la tendencia de los casos por varios países, lo que permite identificar los incrementos o descensos a lo largo del tiempo.</li>
+								<li>4.	<b>Estadísticas adicionales</b>: se muestra el comportamiento de los casos agrupados por año y mes, así como la tendencia de la tasa de mortalidad % (calculada como la cantidad de muertes sobre el total de casos confirmados para cada periodo). El usuario puede seleccionar el país que necesita analizar.</li>
 							</ul>
 							<br>
                             <!-- <div class="about-image"> -->
@@ -234,7 +234,7 @@
                         <div class="col-md-12">
                             <h4 class="widget-title">Información de Grupo</h4>
 							<div>
-								<h5>Este trabajo fue realizado en conjunto por Eddson Sierra, Alejandro López, Diego Martinez, Jairo Salazar y Sergio Palma. El código y documentación están disponibles en:</h5>
+								<h5>Este trabajo fue realizado en conjunto por <b>Eddson Sierra, Alejandro López, Diego Martinez, Jairo Salazar y Sergio Palma</b>. El código y documentación están disponibles en:</h5>
 								<a href="https://github.com/sergiopalmat/Product-Development"> Repositorio</a>
 							</div>
                         </div>							
